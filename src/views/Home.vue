@@ -1,5 +1,5 @@
 <template>
-  <q-page>
+  <q-page style="background-color: white;">
     <q-page-sticky position="top-right" :offset="[2, 18]" style="z-index: 6">
       <img src="@/assets/icones/ico-gps.png" @click="mylocal" width="40px" />
     </q-page-sticky>
@@ -69,7 +69,7 @@
         <div class="col">
           <img src="@/assets/icones/ico-bad.png"
                width="80px"
-               @click=""  />
+               @click="$router.push('rescue')"  />
         </div>
       </div>
     </q-modal>

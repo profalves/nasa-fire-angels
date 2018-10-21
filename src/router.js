@@ -13,6 +13,7 @@ import ListAlerts from './views/listAlert.vue'
 import Confirmations from './views/Confirmations.vue'
 import Finish from './views/finish.vue'
 import Follow from './views/Followship.vue'
+import Rescue from './views/Rescue.vue'
 
 Vue.use(Router)
 
@@ -59,6 +60,11 @@ export default new Router({
       path: '/finish',
       name: 'finish',
       component: Finish
+    },
+    {
+      path: '/rescue',
+      name: 'rescue',
+      component: Rescue
     },
     {
       path: '/follow',

@@ -31,10 +31,6 @@
           </q-item>
           <q-item to="/about">
             <q-item-side icon="info_outline" />
-            <q-item-main label="Solicitações" />
-          </q-item>
-          <q-item to="/about">
-            <q-item-side icon="info_outline" />
             <q-item-main label="About" />
           </q-item>
 
