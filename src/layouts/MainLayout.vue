@@ -1,7 +1,9 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-layout-header>
+
       <q-toolbar color="black" inverted>
+        <i class="fas fa-arrow-left" @click="$router.push('home')"></i>
         <q-toolbar-title class="capitalize">
           {{$route.name}}
         </q-toolbar-title>

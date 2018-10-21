@@ -11,6 +11,8 @@ import About from './views/About.vue'
 import Login from './views/Login.vue'
 import ListAlerts from './views/listAlert.vue'
 import Confirmations from './views/Confirmations.vue'
+import Finish from './views/finish.vue'
+import Follow from './views/Followship.vue'
 
 Vue.use(Router)
 
@@ -52,6 +54,23 @@ export default new Router({
       path: '/confirmations',
       name: 'Confirmations',
       component: Confirmations
+    },
+    {
+      path: '/finish',
+      name: 'finish',
+      component: Finish
+    },
+    {
+      path: '/follow',
+      name: 'follow',
+      component: MainLayout,
+      children: [
+        {
+          path: '/follow',
+          name: 'going along',
+          component: Follow
+        }
+      ]
     },
   ]
 })
