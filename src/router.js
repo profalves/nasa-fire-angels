@@ -1,8 +1,16 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
+// Layouts
 import DefaultLayout from './layouts/Default.vue'
+import MainLayout from './layouts/MainLayout.vue'
+
+// Views
 import Home from './views/Home.vue'
 import About from './views/About.vue'
+import Login from './views/Login.vue'
+import ListAlerts from './views/listAlert.vue'
+import Confirmations from './views/Confirmations.vue'
 
 Vue.use(Router)
 
@@ -10,6 +18,10 @@ export default new Router({
   routes: [
     {
       path: '/',
+      component: Login
+    },
+    {
+      path: '/home',
       component: DefaultLayout,
       children: [
         {
@@ -23,6 +35,23 @@ export default new Router({
           component: About
         }
       ]
-    }
+    },
+    {
+      path: '/vegetation',
+      component: MainLayout,
+      children: [
+        {
+          path: '/Vegetation',
+          name: 'vegetation',
+          component: ListAlerts
+        }
+      ]
+
+    },
+    {
+      path: '/confirmations',
+      name: 'Confirmations',
+      component: Confirmations
+    },
   ]
 })

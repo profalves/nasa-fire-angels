@@ -1,17 +1,11 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-layout-header>
-      <q-page-sticky position="bottom-left" :offset="[18, 18]" style="z-index: 5">
-        <q-btn
-          flat
-          dense
-          round
-          @click="leftDrawerOpen = !leftDrawerOpen"
-          aria-label="Menu"
-          icon="menu"
-          style="z-index: 5;"
-        />
-      </q-page-sticky>
+      <q-toolbar color="black" inverted>
+        <q-toolbar-title class="capitalize">
+          {{$route.name}}
+        </q-toolbar-title>
+      </q-toolbar>
     </q-layout-header>
 
     <q-layout-drawer
@@ -25,7 +19,7 @@
       >
         <q-list no-border link inset-delimiter>
           <q-list-header>Menu</q-list-header>
-          <q-item to="/home" v-show="$route.path !== '/home'" exact>
+          <q-item to="/home" exact>
             <q-item-side icon="home" />
             <q-item-main label="Home" />
           </q-item>
